@@ -1,0 +1,47 @@
+<!-- 경북 -->
+<ul class="gugun">
+    <li><label><input type="checkbox" id="kyeongbuk_all"> 전체선택</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="포항시"> 포항시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="경주시"> 경주시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="김천시"> 김천시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="안동시"> 안동시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="구미시"> 구미시</label></li>
+
+    <li><label><input type="checkbox" name="wr_1[]" value="영주시"> 영주시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="영천시"> 영천시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="상주시"> 상주시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="문경시"> 문경시</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="경산시"> 경산시</label></li>
+
+    <li><label><input type="checkbox" name="wr_1[]" value="의성군"> 의성군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="청송군"> 청송군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="영양군"> 영양군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="영덕군"> 영덕군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="청도군"> 청도군</label></li>
+
+    <li><label><input type="checkbox" name="wr_1[]" value="고령군"> 고령군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="성주군"> 성주군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="칠곡군"> 칠곡군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="예천군"> 예천군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="봉화군"> 봉화군</label></li>
+
+    <li><label><input type="checkbox" name="wr_1[]" value="울진군"> 울진군</label></li>
+    <li><label><input type="checkbox" name="wr_1[]" value="울릉군"> 울릉군</label></li>
+</ul>
+<script>
+    $(document).ready(function() {
+        // "전체선택" 체크박스 클릭 시 모든 체크박스 선택/해제
+        $("#kyeongbuk_all").click(function() {
+            $("input:checkbox[name='wr_1[]']").prop("checked", this.checked);
+        });
+    
+        // 개별 체크박스 변경 시 "전체선택" 체크 상태 조정
+        $("input:checkbox[name='wr_1[]']").change(function() {
+            var total = $("input:checkbox[name='wr_1[]']").length;
+            var checked = $("input:checkbox[name='wr_1[]']:checked").length;
+    
+            $("#kyeongbuk_all").prop("checked", total === checked);
+        });
+    });
+    </script>
+    

@@ -1,0 +1,115 @@
+wr_1 
+wr_2 분할
+wr_3 광고노출기간 $current_time
+wr_4 기본주소 
+wr_5 분할
+    ext5_05 나머지 주소 (읍면동)
+wr_6 
+wr_7 $notice_time
+wr_8 위도
+wr_9 경도
+wr_10 
+
+
+대구 주야간보호센터
+
+
+
+
+
+
+$ex5_filed = explode("|",$write['wr_5']); 
+$ext5_00  = $ex5_filed[0];//tel 1
+$ext5_01  = $ex5_filed[1];//tel 2
+$ext5_02  = $ex5_filed[2];//tel 3
+$ext5_03  = $ex5_filed[3];//입소정원 일반
+$ext5_04  = $ex5_filed[4];//주소
+$ext5_05  = $ex5_filed[5];//주소
+$ext5_06  = $ex5_filed[6];//비급여
+$ext5_07  = $ex5_filed[7];//비급여
+$ext5_08  = $ex5_filed[8];//비급여
+$ext5_09  = $ex5_filed[9];//empty
+$ext5_10  = $ex5_filed[10];//비급여
+$ext5_11  = $ex5_filed[11];//비급여
+$ext5_12  = $ex5_filed[12];//비급여
+$ext5_13  = $ex5_filed[13];//비급여
+$ext5_14  = $ex5_filed[14];//비급여
+$ext5_15  = $ex5_filed[15];//주소
+$ext5_16  = $ex5_filed[16];//주소
+$ext5_17  = $ex5_filed[17];//비급여
+$ext5_18  = $ex5_filed[18];//비급여
+$ext5_19  = $ex5_filed[19];//비급여
+$ext5_20  = $ex5_filed[20];//비급여
+$ext5_21  = $ex5_filed[21];//돌봄시간
+$ext5_22  = $ex5_filed[22];//돌봄시간
+$ext5_23  = $ex5_filed[23];//돌봄시간
+$ext5_24  = $ex5_filed[24];//돌봄시간
+$ext5_25  = $ex5_filed[25];//휴무일
+$ext5_26  = $ex5_filed[26];
+$ext5_27  = $ex5_filed[27];
+$ext5_28  = $ex5_filed[28];
+$ext5_29  = $ex5_filed[29];
+$ext5_30  = $ex5_filed[30];//비급여
+$ext5_31  = $ex5_filed[31];//비급여
+$ext5_32  = $ex5_filed[32];//비급여
+$ext5_33  = $ex5_filed[33];//부대시설
+$ext5_34  = $ex5_filed[34];//부대시설
+$ext5_35  = $ex5_filed[35];//부대시설
+$ext5_36  = $ex5_filed[36];//부대시설
+$ext5_37  = $ex5_filed[37];//부대시설
+$ext5_38  = $ex5_filed[38];//부대시설
+$ext5_39  = $ex5_filed[39];//부대시설
+$ext5_40  = $ex5_filed[40];//부대시설
+$ext5_41  = $ex5_filed[41];//부대시설
+$ext5_42  = $ex5_filed[42];
+$ext5_43  = $ex5_filed[43];
+$ext5_44  = $ex5_filed[44];
+$ext5_45  = $ex5_filed[45];
+
+$ex2_filed = explode("|",$write['wr_2']); 
+$ext2_00  = $ex2_filed[0];//프로그램
+$ext2_01  = $ex2_filed[1];//프로그램
+$ext2_02  = $ex2_filed[2];//프로그램
+$ext2_03  = $ex2_filed[3];//프로그램
+$ext2_04  = $ex2_filed[4];//프로그램
+$ext2_05  = $ex2_filed[5];//프로그램
+$ext2_06  = $ex2_filed[6];//프로그램
+$ext2_07  = $ex2_filed[7];//프로그램
+$ext2_08  = $ex2_filed[8];//프로그램
+$ext2_09  = $ex2_filed[9];//프로그램
+$ext2_10  = $ex2_filed[10];//프로그램
+$ext2_11  = $ex2_filed[11];//프로그램
+$ext2_12  = $ex2_filed[12];//프로그램
+$ext2_13  = $ex2_filed[13];//프로그램
+$ext2_14  = $ex2_filed[14];//프로그램
+$ext2_15  = $ex2_filed[15];//
+$ext2_16  = $ex2_filed[16];//
+$ext2_17  = $ex2_filed[17];//
+$ext2_18  = $ex2_filed[18];//
+$ext2_19  = $ex2_filed[19];//
+$ext2_20  = $ex2_filed[20];//
+$ext2_21  = $ex2_filed[21];//
+$ext2_22  = $ex2_filed[22];//
+$ext2_23  = $ex2_filed[23];//
+$ext2_24  = $ex2_filed[24];//
+$ext2_25  = $ex2_filed[25];//
+$ext2_26  = $ex2_filed[26];//
+$ext2_27  = $ex2_filed[27];//
+$ext2_28  = $ex2_filed[28];//
+$ext2_29  = $ex2_filed[29];//
+$ext2_30  = $ex2_filed[30];//
+$ext2_31  = $ex2_filed[31];//
+$ext2_32  = $ex2_filed[32];//
+$ext2_33  = $ex2_filed[33];//
+$ext2_34  = $ex2_filed[34];//
+$ext2_35  = $ex2_filed[35];//
+$ext2_36  = $ex2_filed[36];//
+$ext2_37  = $ex2_filed[37];//
+$ext2_38  = $ex2_filed[38];//입소정원 스페셜
+$ext2_39  = $ex2_filed[39];//입소정원남
+$ext2_40  = $ex2_filed[40];//입소정원여
+$ext2_41  = $ex2_filed[41];//입소정원대기
+$ext2_42  = $ex2_filed[42];//입소정원대기
+$ext2_43  = $ex2_filed[43];
+$ext2_44  = $ex2_filed[44];
+$ext2_45  = $ex2_filed[45];

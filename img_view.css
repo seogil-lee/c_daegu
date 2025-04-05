@@ -1,0 +1,13 @@
+.tbl_frm011 {display:flex;justify-content:flex-start;align-items: flex-start; width:100%;margin:50px 0 30px 0;}
+#mainImg {text-align:center;}
+#mainImg img {width:780px;height:558px;object-fit: cover;}
+#imgList {height:auto;list-style:none;margin-left:10px;display:grid;grid-template-columns: repeat(2,1fr);grid-template-rows: repeat(5, 105px);grid-gap:8px;}
+#imgList li {border:1px solid #EEE;}
+#imgList li img {width:105px;height:105px;}
+
+@media (max-width:1366px) {
+    .tbl_frm011 {flex-direction: column;}
+    #imgList {grid-template-columns: repeat(5,1fr);grid-template-rows: repeat(2, 105px);grid-gap:8px;margin-top:20px;}
+}
+
+
