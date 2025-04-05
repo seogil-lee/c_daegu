@@ -364,9 +364,9 @@ return true;
 
             <li>단기요양</li>
             <li>
-                <label for="ext5-1"><INPUT type=radio name='ext5_31' id='ext5-1' VALUE="문의" <?php if ($ext5_31 == "문의") echo'checked';?> checked >&nbsp;문의&nbsp;&nbsp;&nbsp;&nbsp;</label>
-				<label for="ext5-2"><INPUT type=radio name='ext5_31' id='ext5-2' VALUE="단기요양가능" <?php if ($ext5_31 == "단기요양가능") echo'checked';?>>&nbsp;단기요양가능&nbsp;&nbsp;&nbsp;&nbsp;</label>
-				<label for="ext5-3"><INPUT type=radio name='ext5_31' id='ext5-3' VALUE="단기요양불가" <?php if ($ext5_31 == "단기요양불가") echo'checked';?> >&nbsp;단기요양불가</label>
+                <label for="ext5-1"><INPUT type=radio name='ext5_44' id='ext5-1' VALUE="문의" <?php if ($ext5_44 == "문의") echo'checked';?> checked >&nbsp;문의&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<label for="ext5-2"><INPUT type=radio name='ext5_44' id='ext5-2' VALUE="단기요양가능" <?php if ($ext5_44 == "단기요양가능") echo'checked';?>>&nbsp;단기요양가능&nbsp;&nbsp;&nbsp;&nbsp;</label>
+				<label for="ext5-3"><INPUT type=radio name='ext5_44' id='ext5-3' VALUE="단기요양불가" <?php if ($ext5_44 == "단기요양불가") echo'checked';?> >&nbsp;단기요양불가</label>
             </li>
 
             <li>입소정원</li>
