@@ -348,8 +348,29 @@ return true;
 		    	<input name='ext5_02' class="frm_input required" value='<?php echo $ext5_02?>' type='text' size='8' maxlength='4' onkeydown='onlyNumber(this);' itemname='일반전화 세번째자리' class=input>
             </li>
 
+            
             <li>홈페이지</li>
             <li><input type="text" name="wr_link1" value="<?php if($w=="u"){echo $write['wr_link1'];} ?>" id="wr_link1" class="frm_input" size="80"></li>
+
+            <li>돌봄시간</li>
+            <li>
+                <SELECT name='ext5_21' class='info_input' itemname='시간'>
+		            <option value=''>선택</option>
+		            <option value='오전' <?php if($ext5_21 == "오전") echo "selected"; ?>>오전</option>
+		            <option value='오후' <?php if($ext5_21 == "오후") echo "selected"; ?>>오후</option>
+                </select>  
+	            <input name='ext5_22' class="info_input" value='<?php echo $ext5_22?>' type='text' size='3' maxlength='4' onkeydown='onlyNumber(this);' itemname='돌봄시간'> 시 부터 &nbsp;&nbsp;&nbsp;
+
+	            <SELECT name='ext5_23' class='info_input' itemname='시간'>
+	            	<option value=''>선택</option>
+	            	<option value='오전' <?php if($ext5_23 == "오전") echo "selected"; ?>>오전</option>
+	            	<option value='오후' <?php if($ext5_23 == "오후") echo "selected"; ?>>오후</option>
+	            </select>
+	            <input name='ext5_24' class="info_input" value='<?php echo $ext5_24?>' type='text' size='3' maxlength='4' onkeydown='onlyNumber(this);' itemname='돌봄시간'> 시 까지
+            </li>
+
+            <li>휴무일</li>
+            <li><input type="text" name="ext5_25" value="<?php echo $ext5_25;?>" id="ext5_25" class="info_input" size="80" maxlength="80"></li>
 
             <li>장기요양기관평가</li>
             <li>
@@ -449,12 +470,12 @@ return true;
                     <input name='ext5_26' class="info_input" value='<?php echo $ext5_26?>' type='text' size='4' maxlength='4' onkeydown='onlyNumber(this);' itemname='치료사'> 명
                 </div>
                 <div>
-                    <input name='ext5_30' class="info_input" value='<?php echo $ext5_30?>' type='text' size='4' maxlength='4' onkeydown='onlyNumber(this);' itemname='조리원'> 명
+                    <input name='ext5_42' class="info_input" value='<?php echo $ext5_42?>' type='text' size='4' maxlength='4' onkeydown='onlyNumber(this);' itemname='조리원'> 명
                 </div>
             </li>
         </ul>
 
-        <ul class="info_ul">
+        <!-- <ul class="info_ul">
             <li>침실정보</li>
             <li class="bed_info">
                     <div>1 인실</div>
@@ -493,7 +514,7 @@ return true;
                         <input name='ext2_11' class="info_input" value='<?php echo $ext2_11?>' type='text' size='4' maxlength='4' onkeydown='onlyNumber(this);' itemname='특수침실'> 개
                     </div>
             </li>
-        </ul>
+        </ul> -->
 
         <ul class="info_ul">
             <li>비급여</li>
@@ -503,30 +524,35 @@ return true;
                 <div>산출근거</div>
                 <div>1개월(30일) 합</div>
 
-                <div><input name='ext2_13' class="info_input" value='<?php echo $ext2_13?>' type='text' size='25' itemname='비급여1'></div>
-		        <div><input name='ext2_14' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext2_14?>' type='text' size='12' itemname='금액1'> 원</div>
-		        <div><input name='ext2_15' class="info_input" value='<?php echo $ext2_15?>' type='text' size='25' itemname='근거1'></div>
-		        <div><input name='ext5_32' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_32?>' type='text' size='12' itemname='금액2'> 원</div>
+                <div><input name='ext5_06' class="info_input" value='<?php echo $ext5_06?>' type='text' size='25' itemname='비급여1'></div>
+		        <div><input name='ext5_07' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_07?>' type='text' size='12' itemname='금액1'> 원</div>
+		        <div><input name='ext5_08' class="info_input" value='<?php echo $ext5_08?>' type='text' size='25' itemname='근거1'></div>
 
-		        <div><input name='ext2_16' class="info_input" value='<?php echo $ext2_16?>' type='text' size='25' itemname='비급여2'></div>
-		        <div><input name='ext2_17' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext2_17?>' type='text' size='12' itemname='금액3'> 원</div>
-		        <div><input name='ext2_18' class="info_input"  value='<?php echo $ext2_18?>' type='text' size='25' itemname='근거2'></div>
-		        <div><input name='ext5_33' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_33?>' type='text' size='12' itemname='금액4'> 원</div>
+		        <div><input name='ext5_45' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_45?>' type='text' size='12' itemname='금액2'> 원</div>
 
-		        <div><input name='ext2_19' class="info_input" value='<?php echo $ext2_19?>' type='text' size='25' itemname='비급여3'></div>
-		        <div><input name='ext2_20' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext2_20?>' type='text' size='12'  itemname='금액5'> 원</div>
-		        <div><input name='ext2_21' class="info_input"  value='<?php echo $ext2_21?>' type='text' size='25' itemname='근거3'></div>
-		        <div><input name='ext5_34' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_34?>' type='text' size='12' itemname='금액6'> 원</div>
+		        <div><input name='ext5_10' class="info_input" value='<?php echo $ext5_10?>' type='text' size='25' itemname='비급여2'></div>
+		        <div><input name='ext5_11' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext5_11?>' type='text' size='12' itemname='금액3'> 원</div>
+		        <div><input name='ext5_12' class="info_input"  value='<?php echo $ext5_12?>' type='text' size='25' itemname='근거2'></div>
 
-		        <div><input name='ext2_22' class="info_input" value='<?php echo $ext2_22?>' type='text' size='25' itemname='비급여4'></div>
-		        <div><input name='ext2_23' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext2_23?>' type='text' size='12' itemname='금액7'> 원</div>
-		        <div><input name='ext2_24' class="info_input" value='<?php echo $ext2_24?>' type='text' size='25' itemname='근거4'></div>
-		        <div><input name='ext5_35' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_35?>' type='text' size='12' itemname='금액8'> 원</div>
+		        <div><input name='ext2_19' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext2_19?>' type='text' size='12' itemname='금액4'> 원</div>
 
-		        <div><input name='ext2_25' class="info_input" value='<?php echo $ext2_25?>' type='text' size='25' itemname='비급여5'></div>
-		        <div><input name='ext2_26' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext2_26?>' type='text' size='12' itemname='금액9'> 원</div>
-		        <div><input name='ext2_27' class="info_input"  value='<?php echo $ext2_27?>' type='text' size='25' itemname='근거5'></div>
-		        <div><input name='ext5_36' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext5_36?>' type='text' size='12' itemname='금액10'> 원</div>
+		        <div><input name='ext5_13' class="info_input" value='<?php echo $ext5_13?>' type='text' size='25' itemname='비급여3'></div>
+		        <div><input name='ext5_14' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext5_14?>' type='text' size='12'  itemname='금액5'> 원</div>
+		        <div><input name='ext5_32' class="info_input"  value='<?php echo $ext5_32?>' type='text' size='25' itemname='근거3'></div>
+
+		        <div><input name='ext2_20' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext2_20?>' type='text' size='12' itemname='금액6'> 원</div>
+
+		        <div><input name='ext5_17' class="info_input" value='<?php echo $ext5_17?>' type='text' size='25' itemname='비급여4'></div>
+		        <div><input name='ext5_18' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext5_18?>' type='text' size='12' itemname='금액7'> 원</div>
+		        <div><input name='ext5_19' class="info_input" value='<?php echo $ext5_19?>' type='text' size='25' itemname='근거4'></div>
+
+		        <div><input name='ext2_21' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext2_21?>' type='text' size='12' itemname='금액8'> 원</div>
+
+		        <div><input name='ext5_20' class="info_input" value='<?php echo $ext5_20?>' type='text' size='25' itemname='비급여5'></div>
+		        <div><input name='ext5_30' class="info_input" onKeyUp="number_format(this)" value='<?php echo $ext5_30?>' type='text' size='12' itemname='금액9'> 원</div>
+		        <div><input name='ext5_31' class="info_input"  value='<?php echo $ext5_31?>' type='text' size='25' itemname='근거5'></div>
+
+		        <div><input name='ext2_22' class="info_input" onKeyUp="number_format(this)"  value='<?php echo $ext2_22?>' type='text' size='12' itemname='금액10'> 원</div>
             </li>
         </ul>
 
@@ -542,35 +568,35 @@ return true;
                 <div>의료 및 간호사실</div>
                 <div>작업 및 훈련실</div>
 
-                <div><input name='ext2_30' class="info_input" value='<?php echo $ext2_30?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설3'> 개</div>
-                <div><input name='ext2_31' class="info_input" value='<?php echo $ext2_31?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설4'> 개</div>
-                <div><input name='ext2_32' class="info_input" value='<?php echo $ext2_32?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설5'> 개</div>
-                <div><input name='ext2_33' class="info_input" value='<?php echo $ext2_33?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설6'> 개</div>
-                <div><input name='ext2_34' class="info_input" value='<?php echo $ext2_34?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설7'> 개</div>
-                <div><input name='ext2_35' class="info_input" value='<?php echo $ext2_35?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설8'> 개</div>
-                <div><input name='ext2_36' class="info_input" value='<?php echo $ext2_36?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설9'> 개</div>
-                <div><input name='ext2_28' class="info_input" value='<?php echo $ext2_28?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설1'>  개</div>
+                <div><input name='ext5_35' class="info_input" value='<?php echo $ext5_35?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설3'> 개</div>
+                <div><input name='ext5_36' class="info_input" value='<?php echo $ext5_36?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설4'> 개</div>
+                <div><input name='ext5_37' class="info_input" value='<?php echo $ext5_37?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설5'> 개</div>
+                <div><input name='ext5_38' class="info_input" value='<?php echo $ext5_38?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설6'> 개</div>
+                <div><input name='ext5_39' class="info_input" value='<?php echo $ext5_39?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설7'> 개</div>
+                <div><input name='ext5_40' class="info_input" value='<?php echo $ext5_40?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설8'> 개</div>
+                <div><input name='ext5_41' class="info_input" value='<?php echo $ext5_41?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설9'> 개</div>
+                <div><input name='ext5_43' class="info_input" value='<?php echo $ext5_43?>' type='text' size='4' onkeydown='onlyNumber(this);' itemname='시설1'>  개</div>
             </li>
         </ul>
 
         <ul class="info_ul">
             <li>프로그램</li>
             <li class="program">
-                <div><input name='ext5_21' class="info_input" value='<?php echo $ext5_21?>' type='text' size='28' itemname='pro1'></div>
-		        <div><input name='ext5_22' class="info_input" value='<?php echo $ext5_22?>' type='text' size='28' itemname='pro2'></div>
-		        <div><input name='ext5_06' class="info_input" value='<?php echo $ext5_06?>' type='text' size='28' itemname='pro3'></div>
-                <div><input name='ext5_07' class="info_input" value='<?php echo $ext5_07?>' type='text' size='28' itemname='pro4'></div>
-		        <div><input name='ext5_08' class="info_input" value='<?php echo $ext5_08?>' type='text' size='28' itemname='pro5'></div>
-		        <div><input name='ext5_09' class="info_input" value='<?php echo $ext5_09?>' type='text' size='28' itemname='pro6'></div>
-		        <div><input name='ext5_10' class="info_input" value='<?php echo $ext5_10?>' type='text' size='28' itemname='pro7'></div>
-		        <div><input name='ext5_11' class="info_input" value='<?php echo $ext5_11?>' type='text' size='28' itemname='pro8'></div>
-		        <div><input name='ext5_12' class="info_input" value='<?php echo $ext5_12?>' type='text' size='28' itemname='pro9'></div>
-                <div><input name='ext5_13' class="info_input" value='<?php echo $ext5_13?>' type='text' size='28' itemname='pro10'></div>
-		        <div><input name='ext5_14' class="info_input" value='<?php echo $ext5_14?>' type='text' size='28' itemname='pro11'></div>
-		        <div><input name='ext5_19' class="info_input" value='<?php echo $ext5_19?>' type='text' size='28' itemname='pro12'></div>
-		        <div><input name='ext5_20' class="info_input" value='<?php echo $ext5_20?>' type='text' size='28' itemname='pro13'></div>
-		        <div><input name='ext5_17' class="info_input" value='<?php echo $ext5_17?>' type='text' size='28' itemname='pro14'></div>
-		        <div><input name='ext5_18' class="info_input" value='<?php echo $ext5_18?>' type='text' size='28' itemname='pro15'></div>
+                <div><input name='ext2_00' class="info_input" value='<?php echo $ext2_00?>' type='text' size='28' itemname='pro1'></div>
+		        <div><input name='ext2_01' class="info_input" value='<?php echo $ext2_01?>' type='text' size='28' itemname='pro2'></div>
+		        <div><input name='ext2_02' class="info_input" value='<?php echo $ext2_02?>' type='text' size='28' itemname='pro3'></div>
+                <div><input name='ext2_03' class="info_input" value='<?php echo $ext2_03?>' type='text' size='28' itemname='pro4'></div>
+		        <div><input name='ext2_04' class="info_input" value='<?php echo $ext2_04?>' type='text' size='28' itemname='pro5'></div>
+		        <div><input name='ext2_05' class="info_input" value='<?php echo $ext2_05?>' type='text' size='28' itemname='pro6'></div>
+		        <div><input name='ext2_06' class="info_input" value='<?php echo $ext2_06?>' type='text' size='28' itemname='pro7'></div>
+		        <div><input name='ext2_07' class="info_input" value='<?php echo $ext2_07?>' type='text' size='28' itemname='pro8'></div>
+		        <div><input name='ext2_08' class="info_input" value='<?php echo $ext2_08?>' type='text' size='28' itemname='pro9'></div>
+                <div><input name='ext2_09' class="info_input" value='<?php echo $ext2_09?>' type='text' size='28' itemname='pro10'></div>
+		        <div><input name='ext2_10' class="info_input" value='<?php echo $ext2_10?>' type='text' size='28' itemname='pro11'></div>
+		        <div><input name='ext2_11' class="info_input" value='<?php echo $ext2_11?>' type='text' size='28' itemname='pro12'></div>
+		        <div><input name='ext2_12' class="info_input" value='<?php echo $ext2_12?>' type='text' size='28' itemname='pro13'></div>
+		        <div><input name='ext2_13' class="info_input" value='<?php echo $ext2_13?>' type='text' size='28' itemname='pro14'></div>
+		        <div><input name='ext2_14' class="info_input" value='<?php echo $ext2_14?>' type='text' size='28' itemname='pro15'></div>
             </li>
         </ul>
     </div>
